@@ -9,10 +9,24 @@
     />
   </div>
 
-  <div>
-    <pre>
-      {{ meals }}
-    </pre>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-5 p-8">
+    <div v-for="meal of meals" :key="meal.idMeal" class="bg-white shadow rounded-xl">
+      <router-link to="/">
+        <img :src="meal.strMealThumb" :alt="meal.strMeal" class="rounded-t-xl h-48 w-full object-cover">
+      </router-link>
+      <div class="p-3">
+          <h3 class="font-bold">{{ meal.strMeal }}</h3>
+          <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, repellendus itaque, consequatur.</p>
+          <div class="flex items-center justify-between">
+            <a href="meal.strYoutube" target="_blank"
+            class="px-3 py-2 rounded border-2 text-white border-red-400 bg-red-500 hover:bg-red-600 transition-colors">
+              YouTube
+            </a>
+          </div>
+      </div>
+
+
+    </div>
   </div>
 </template>
 
