@@ -71,7 +71,6 @@ const meal = ref({})
 onMounted(() => {
     axiosClient.get(`lookup.php?i=${route.params.id}`)
         .then(({ data }) => {
-            debugger;
             meal.value = data.meals[0] || {}
         })
 

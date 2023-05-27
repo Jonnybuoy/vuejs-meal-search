@@ -11,7 +11,6 @@ import { useRoute } from 'vue-router'
 import Meals from '../components/Meals.vue'
 
 const route = useRoute();
-debugger;
 const meals = computed(() => store.state.mealsByIngredient)
 
 onMounted(() => {
